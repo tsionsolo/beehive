@@ -6,7 +6,7 @@ from slack_sdk.errors import SlackApiError
 client = WebClient(os.environ["SLACK_BOT_TOKEN"])
 
 try:
-    response = client.chat_postMessage(channel='#updates', text="Hello world!")
+    response = client.chat_postMessage(channel='#updates', text="Hello world!") # channel ID is: C01RMDXV20K
     assert response["message"]["text"] == "Hello world!"
 except SlackApiError as e:
     # You will get a SlackApiError if "ok" is False
